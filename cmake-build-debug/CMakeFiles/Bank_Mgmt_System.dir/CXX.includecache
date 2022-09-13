@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/jnlca/dev/Bank-Mgmt-System/Bank.cpp
+Bank.h
+C:/Users/jnlca/dev/Bank-Mgmt-System/Bank.h
+
+C:/Users/jnlca/dev/Bank-Mgmt-System/Bank.h
+iostream
+-
+vector
+-
+User.h
+C:/Users/jnlca/dev/Bank-Mgmt-System/User.h
+
+C:/Users/jnlca/dev/Bank-Mgmt-System/User.cpp
+iomanip
+-
+User.h
+C:/Users/jnlca/dev/Bank-Mgmt-System/User.h
+
+C:/Users/jnlca/dev/Bank-Mgmt-System/User.h
+iostream
+-
+
