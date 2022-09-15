@@ -25,7 +25,7 @@ int main() {
 				  << "B for Bank Information\n"
 				  << "I for User Information\n"
 				  << "D to Deposit Funds\n"
-				  << "W to Deposit Funds\n"
+				  << "W to Withdraw Funds\n"
 				  << "S to Sign In\n"
 				  << "O to Sign Out\n"
 				  << "Q to quit\n";
