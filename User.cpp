@@ -36,10 +36,19 @@ std::string User::getPassword() {
 	return this->password;
 }
 
-double User::getCheckingBal() {
+double User::getCheckingBal() const {
 	return this->checkingBal;
+}
+
+double User::getSavingsBal() const {
+	return this->savingsBal;
 }
 
 void User::setCheckingBal(double checkingBal) {
 	this->checkingBal = checkingBal;
+}
+
+void User::setSavingsBal(double savingsBal) {
+
+	this->savingsBal = savingsBal;
 }

@@ -18,13 +18,15 @@ vector
 User.h
 C:/Users/jnlca/dev/Bank-Mgmt-System/User.h
 
-C:/Users/jnlca/dev/Bank-Mgmt-System/User.cpp
-iomanip
--
-User.h
-C:/Users/jnlca/dev/Bank-Mgmt-System/User.h
-
 C:/Users/jnlca/dev/Bank-Mgmt-System/User.h
 iostream
 -
+
+C:/Users/jnlca/dev/Bank-Mgmt-System/main.cpp
+iostream
+-
+Bank.h
+C:/Users/jnlca/dev/Bank-Mgmt-System/Bank.h
+User.h
+C:/Users/jnlca/dev/Bank-Mgmt-System/User.h
 

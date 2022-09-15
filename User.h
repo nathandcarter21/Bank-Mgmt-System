@@ -25,7 +25,11 @@ public:
 
 	std::string getPassword();
 
-	double getCheckingBal();
+	double getSavingsBal() const;
+
+	double getCheckingBal() const;
+
+	void setSavingsBal(double savingsBal);
 
 	void setCheckingBal(double checkingBal);
 };

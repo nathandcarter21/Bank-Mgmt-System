@@ -20,14 +20,15 @@ int main() {
 	bool continueLoop = true;
 
 	while (continueLoop) {
-		std::cout << "Please select an action\n" <<
-				  "N for New Account\n" <<
-				  "B for Bank Information\n" <<
-				  "I for User Information\n" <<
-				  "D to Deposit Funds\n" <<
-				  "S to Sign In\n" <<
-				  "O to Sign Out\n" <<
-				  "Q to quit\n";
+		std::cout << "Please select an action\n"
+				  << "N for New Account\n"
+				  << "B for Bank Information\n"
+				  << "I for User Information\n"
+				  << "D to Deposit Funds\n"
+				  << "W to Deposit Funds\n"
+				  << "S to Sign In\n"
+				  << "O to Sign Out\n"
+				  << "Q to quit\n";
 		std::cin >> input;
 		std::cout << std::endl;
 		if (input == "Q") {
@@ -40,10 +41,14 @@ int main() {
 			bank.PrintCurrUser();
 		} else if (input == "D") {
 			bank.Deposit();
+		} else if (input == "W") {
+			bank.Withdraw();
 		} else if (input == "S") {
 			bank.UserSignIn();
 		} else if (input == "O") {
 			bank.UserSignOut();
+		} else {
+			std::cout << "Please enter a valid response\n";
 		}
 	}
 

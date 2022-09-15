@@ -113,9 +113,50 @@ void Bank::Deposit() {
 		std::cout << "Funds successfully transferred!\n" <<
 				  "Your Checking Account balance is now $" << currUser->getCheckingBal() << std::endl << std::endl;
 	} else if (account == "S") {
-
+		currUser->setSavingsBal(currUser->getSavingsBal() + amount);
+		std::cout << "Funds successfully transferred!\n" <<
+				  "Your Savings Account balance is now $" << currUser->getSavingsBal() << std::endl << std::endl;
 	} else {
-
+		std::cout << "Please enter a valid account\n\n";
 	}
 
+}
+
+void Bank::Withdraw() {
+	if (!signedIn) {
+		std::cout << "Please sign in first\n\n";
+		return;
+	}
+	double amount;
+	std::string account;
+	std::cout << "How much money would you like to withdraw?\n" <<
+			  "Amount: ";
+	std::cin >> amount;
+	std::cout << std::endl;
+
+	std::cout << "Which account would you like to withdraw $" << amount << "?\n"
+			  << "S for Savings Account and C for Checking Account\n"
+			  << "Account: ";
+	std::cin >> account;
+	if (account == "C") {
+		while (amount > currUser->getCheckingBal()) {
+			std::cout << "Insufficient funds in checking account!\n"
+					  << "Please enter a smaller number: ";
+			std::cin >> amount;
+		}
+		currUser->setCheckingBal(currUser->getCheckingBal() - amount);
+		std::cout << "Funds successfully withdrawn!\n" <<
+				  "Your Checking Account balance is now $" << currUser->getCheckingBal() << std::endl << std::endl;
+	} else if (account == "S") {
+		while (amount > currUser->getSavingsBal()) {
+			std::cout << "Insufficient funds in savings account!\n"
+					  << "Please enter a smaller number: ";
+			std::cin >> amount;
+		}
+		currUser->setSavingsBal(currUser->getSavingsBal() - amount);
+		std::cout << "Funds successfully withdrawn!\n" <<
+				  "Your Checking Account balance is now $" << currUser->getSavingsBal() << std::endl << std::endl;
+	} else {
+		std::cout << "Please enter a valid account\n\n";
+	}
 }
